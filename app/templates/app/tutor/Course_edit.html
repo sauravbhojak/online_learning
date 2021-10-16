@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <center>
+        <h1>Edit Course</h1>
+        <form action="{% url 'courseupdate' pk=key2.id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- security for html  page  -->
+
+            <table>
+                <tr>
+                    <td>Coursename</td>
+                    <td><input type="text" name="coursename" id="" value={{key2.Course_Name}}></td>
+                </tr>
+                <tr>
+                    <td>Code</td>
+                    <td><input type="text" name="code" id="" value={{key2.Code}}></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input type="text" name="description" id="" value={{key2.Description}}></td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td><input type="text" name="duration" id="" value={{key2.Duration}}></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><input type="text" name="price" id="" value={{key2.Price}}></td>
+                </tr>
+                <tr>
+                    <td>Pre_Requirment</td>
+                    <td><input type="text" name="pre_requirement" id="" value={{key2.Pre_Requirement}}></td>
+                </tr>
+                <tr>
+                
+                    <td>Course_pic</td>
+                    <td><input type="file" name="course_pic" id="" value={{key2.Course_Pic}}></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Add Course"></td>
+                </tr>
+
+            </table>
+
+
+        </form>
+
+
+    </center>
+
+</body>
+
+</html>

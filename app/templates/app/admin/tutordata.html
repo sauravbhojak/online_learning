@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Display Table</h2>
+        <p>show all Tutors_Data</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>gender</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Qualification</th>
+                    <th>Skills</th>
+                    <th>DOB</th>
+                    <th>profile_pic</th>
+                    <th>is_created</th>
+                    <th>is_updated</th>
+                    <th>is_verified</th>
+                    <th>is_active</th>
+                       
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if tutordata %} 
+                {% for i in tutordata %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.Firstname}}</td>
+                    <td>{{i.Lastname}}</td>
+                    <td>{{i.gender}}</td>
+                    <td>{{i.Contact}}</td>
+                    <td>{{i.Address}}</td>
+                    <td>{{i.Qualification}}</td>
+                    <td>{{i.Skills}}</td>
+                    <td>{{i.DOB}}</td>
+                    <td><img style="height:50px;width:50px;border-radius:200px;" src="{{MEDIA_URL}}{{i.profile_pic.url}}" alt="" srcset=""></td>
+                    <td>{{i.user_id.is_created}}</td>
+                    <td>{{i.user_id.is_updated}}</td>
+                    <td>{{i.user_id.is_verified}}</td>
+                    <td>{{i.user_id.is_active}}</td>
+                    
+
+                    <td>
+                        <form action="#" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{i.id}}">
+                            <input type="submit" value="Edit">
+                        </form> 
+                    </td>
+                    <td>
+                        <form action="#" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{i.id}}">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %} 
+                {% endif %}
+            </tbody>
+        </table>
+        <button><a href="/">go to index page</a></button>
+    </div>
+</body>
+
+</html>

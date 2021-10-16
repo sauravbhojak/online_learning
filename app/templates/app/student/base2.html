@@ -1,0 +1,334 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	
+	<!-- Bootstrap Core CSS -->
+	<link href="{% static '/student/css/bootstrap.min.css' %}" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="{% static '/student/css/style.css' %}" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="{% static '/student/css/morris.css' %}" type="text/css" />
+	<!-- Graph CSS -->
+	<link href="{% static '/student/css/font-awesome.css' %}" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="{% static '/student/js/jquery-2.1.4.min.js' %}"></script>
+	<!-- //jQuery -->
+	<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet'
+		type='text/css' />
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- lined-icons -->
+	<link rel="stylesheet" href="{% static '/student/css/icon-font.min.css' %}" type='text/css' />
+	<!-- //lined-icons -->
+	 
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static '/css/plugins.css' %}">
+	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+
+	<!-- Modernizer js -->
+	<script src="{% static '/js/vendor/modernizr-3.5.0.min.js '%}"></script>
+</head>
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Header -->
+		<header id="header" class="jnr__header header--one clearfix">
+			<!-- Start Header Top Area -->
+			<div class="junior__header__top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7 col-lg-6 col-sm-12">
+							<div class="jun__header__top__left">
+								<ul class="top__address d-flex justify-content-start align-items-center flex-wrap flex-lg-nowrap flex-md-nowrap">
+									<li><i class="fa fa-envelope"></i><a href="#">e-learning@gmail.com</a></li>
+									<li><i class="fa fa-phone"></i><span>Contact Now :</span><a href="#">+003457289</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Header Top Area -->
+			<!-- Start Mainmenu Area -->
+			<div class="mainmenu__wrapper bg__cat--1 poss-relative header_top_line sticky__header">
+				<div class="container">
+					<div class="row d-none d-lg-flex">
+						<div class="col-sm-4 col-md-6 col-lg-2 order-1 order-lg-1">
+							<div class="logo">
+							</div>
+						</div>
+						<div class="col-sm-4 col-md-2 col-lg-9 order-3 order-lg-2">
+							<div class="mainmenu__wrap">
+								<nav class="mainmenu__nav">
+                                    <ul class="mainmenu">
+                                        <li class="drop"><a href="{% url 'studentindex' %}">Home</a>
+                                        </li>
+                                        <li class="drop"><a href="#">Pages</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{% url 'aboutuspages' %}">about us</a></li>
+                                                <li><a href="{% url 'cart_view' %}">cart Page</a></li>
+                                                <li><a href="{% url 'viewWlist' %}">wishlist page</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{% url 'showcoursedat' %}">Course</a>
+                                        </li>
+                                        
+                                        <li><a href="#">Contact</a></li>
+                                        
+                                        <li><a href="{% url 'studentprofile' %}">Profile</a></li>   
+                                        <li><a href="{% url 'studentlogout' %}">logout</a></li>
+                                        
+                                    </ul>
+                                </nav>
+							</div>
+						</div>
+					
+					</div>
+					<!-- Mobile Menu -->
+                    <div class="mobile-menu d-block d-lg-none">
+                    	<div class="logo">
+                    		<a href="index.html"><img src="images/logo/junior.png" alt="logo"></a>
+                    	</div>
+                    	<a class="minicart-trigger" href="#">
+                    		<i class="fa fa-shopping-basket"></i>
+                    	</a>
+                    </div>
+                    <!-- Mobile Menu -->
+				</div>
+			</div>
+			<!-- End Mainmenu Area -->
+		</header>
+
+        {% block content %}
+
+
+
+
+        {% endblock %}
+			<!-- .Start Footer Contact Area -->
+			<div class="footer__contact__area bg__cat--2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer__contact__wrapper d-flex flex-wrap justify-content-between">
+								<div class="single__footer__address">
+									<div class="ft__contact__icon">
+										<i class="fa fa-home"></i>
+									</div>
+									<div class="ft__contact__details">
+										<p>CG ROAD , Ahmedabad</p>
+										<p>Tops-teach</p>
+									</div>
+								</div>
+								<div class="single__footer__address">
+									<div class="ft__contact__icon">
+										<i class="fa fa-phone"></i>
+									</div>
+									<div class="ft__contact__details">
+										<p><a href="#">+08097-654321</a></p>
+										<p><a href="#">+09876-543211</a></p>
+									</div>
+								</div>
+								<div class="single__footer__address">
+									<div class="ft__contact__icon">
+										<i class="fa fa-envelope"></i>
+									</div>
+									<div class="ft__contact__details">
+										<p><a href="#">e-learning@gmail.com</a></p>
+										<p><a href="#">e-learning@yahoo.com</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .End Footer Contact Area -->
+			<div class="copyright  bg--theme">
+				<div class="container">
+					<div class="row align-items-center copyright__wrapper justify-content-center">
+						<div class="col-lg-12 col-sm-12 col-md-12">
+							<div class="coppy__right__inner text-center">
+								<p><i class="fa fa-copyright"></i>All Right Reserved.<a href="#"> e-learning</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer Area -->
+        <!-- Cartbox -->
+        <div class="cartbox-wrap">
+            <div class="cartbox text-right">
+                <button class="cartbox-close"><i class="zmdi zmdi-close"></i></button>
+                <div class="cartbox__inner text-left">
+                    <div class="cartbox__items">
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="shop-single.html">
+                                    <img src="images/product/sm-pro/1.jpg" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="shop-single.html" class="product-name">brown jacket</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$15</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                        <!-- //Cartbox Single Item -->
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="shop-single.html">
+                                    <img src="images/product/sm-pro/2.jpg" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="shop-single.html" class="product-name">long sleeve t-shirt</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$25</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div><!-- //Cartbox Single Item -->
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="shop-single.html">
+                                    <img src="images/product/sm-pro/3.jpg" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="shop-single.html" class="product-name">black polo shirt</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$30</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                        <!-- //Cartbox Single Item -->
+                    </div>
+                    <div class="cartbox__total">
+                        <ul>
+                            <li><span class="cartbox__total__title">Subtotal</span><span class="price">$70</span></li>
+                            <li class="shipping-charge"><span class="cartbox__total__title">Shipping Charge</span><span class="price">$05</span></li>
+                            <li class="grandtotal">Total<span class="price">$75</span></li>
+                        </ul>
+                    </div>
+                    <div class="cartbox__buttons">
+                        <a class="dcare__btn" href="{% url 'cart_view' %}"><span>View cart</span></a>
+                        <a class="dcare__btn" href="checkout.html"><span>Checkout</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Cartbox -->
+
+        <!-- Register Form -->
+        <div class="accountbox-wrapper">
+            <div class="accountbox">
+                <div class="accountbox__inner">
+                	<h4>continue to register</h4>
+                    <div class="accountbox__login">
+                        <form action="#">
+                            <div class="single-input">
+                                <input  type="text" placeholder="User name">
+                            </div>
+                            <div class="single-input">
+                                <input type="email" placeholder="E-mail">
+                            </div>
+                            <div class="single-input">
+                                <input type="text" placeholder="Phone">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Confirm password">
+                            </div>
+                            <div class="single-input text-center">
+                                <button type="submit" class="sign__btn">Sign Up Now</button>
+                            </div>
+                            <div class="accountbox-login__others text-center">
+                                <h6>or register with</h6>
+                                <ul class="dacre__social__link d-flex justify-content-center">
+                                    <li class="facebook"><a target="_blank" href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+                                    <li class="twitter"><a target="_blank" href="https://twitter.com/"><span class="ti-twitter"></span></a></li>
+                                    <li class="pinterest"><a target="_blank" href="#"><span class="ti-google"></span></a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <span class="accountbox-close-button"><i class="zmdi zmdi-close"></i></span>
+                </div>
+                <h3>Have an account ? Login Fast</h3>
+            </div>
+        </div><!-- //Register Form -->
+
+        <!-- Login Form -->
+        <div class="login-wrapper">
+            <div class="accountbox">
+                <div class="accountbox__inner">
+                	<h4>Login to Continue</h4>
+                    <div class="accountbox__login">
+                        <form action="#">
+                            <div class="single-input">
+                                <input type="email" placeholder="E-mail">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="single-input text-center">
+                                <button type="submit" class="sign__btn">SUBMIT</button>
+                            </div>
+                            <div class="accountbox-login__others text-center">
+                                <ul class="dacre__social__link d-flex justify-content-center">
+                                    <li class="facebook"><a target="_blank" href="https://www.facebook.com/"><span class="ti-facebook"></span></a></li>
+                                    <li class="twitter"><a target="_blank" href="https://twitter.com/"><span class="ti-twitter"></span></a></li>
+                                    <li class="pinterest"><a target="_blank" href="#"><span class="ti-google"></span></a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <span class="accountbox-close-button"><i class="zmdi zmdi-close"></i></span>
+                </div>
+                <h3>Have an account ? Login Fast</h3>
+            </div>
+        </div><!-- //Login Form -->
+
+	</div><!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="{% static '/js/vendor/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static '/js/popper.min.js' %}"></script>
+	<script src="{% static '/js/bootstrap.min.js' %}"></script>
+	<script src="{% static '/js/plugins.js' %}"></script>
+	<script src="{% static '/js/active.js' %}"></script>
+</body>
+</html>
+

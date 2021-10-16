@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Display Table</h2>
+        <p>show all Category</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Category_Name</th>
+                    <th>Course_Name</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                    <th>Price</th>
+                    <th>Pre_Requirement</th>
+                    <th>Course_Pic</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if course %} 
+                {% for i in course %} 
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.category_id.Cat_Name}}</td>
+                    <td>{{i.Course_Name}}</td>
+                    <td>{{i.Code}}</td>
+                    <td>{{i.Description}}</td> 
+                    <td>{{i.Duration}}</td>
+                    <td>{{i.Price}}</td>
+                    <td>{{i.Pre_Requirement}}</td>
+                    <td><img style="height:50px;width:50px;border-radius:200px;" src="{{MEDIA_URL}}{{i.Course_Pic.url}}" alt="" srcset=""></td>
+                    <td>
+                        <form action="{% url 'coursedit' pk=i.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{i.id}}">
+                            <input class="btn btn-primary" type="submit" value="Edit">
+                        </form> 
+                    </td>
+                    <td>
+                        <form action="{% url 'coursedelete' pk=i.id %}" method="POST">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{i.id}}">
+                            <input class="btn btn-primary" type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %} {% endif %}
+            </tbody>
+        </table>
+        <button><a href="/">go to index page</a></button>
+    </div>
+</body>
+
+</html>

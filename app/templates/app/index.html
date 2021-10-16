@@ -1,0 +1,245 @@
+{% extends "app/base1.html" %}
+{% load static %}
+{% block content %}
+        <!-- //Header -->
+        <!-- Strat Slider Area -->
+        <br>
+        <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="static\images\banner\mid-img\pexels-pixabay-301920.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="\static\images\banner\mid-img\pexels-julia-m-cameron-4144923.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="\static\images\banner\mid-img\pexels-olia-danilevich-5088022.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+
+        <!-- Start Welcame Area -->
+        <section class="junior__welcome__area section-padding--md bg-pngimage--2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line">Welcome To Junior Home</h2>
+                            <p>Online students attend their classes and studies online through video conferences and chats. The online students are communicated through emails and chat rooms and the welcome wishes for these students are sent through mails.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row jn__welcome__wrapper align-items-center">
+                    <div class="col-md-12 col-lg-6 col-sm-12">
+                        <div class="welcome__juniro__inner">
+                            <h3>Welcome to Our School</h3>
+                            <p>Welcome to your course! I am looking forward to the opportunity we will have to learn and grow
+                                together in the course. The course starts on August 15th and lasts through December 15th. As you
+                                know, this is an online course.</p>
+                            <div class="wel__btn">
+                                <a class="dcare__btn" href="about-us.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-sm-12 md-mt-40 sm-mt-40">
+                        <div class="jnr__Welcome__thumb">
+                            
+                            <a class="play__btn" href="https://www.youtube.com/watch?v=MCJEkZtqlBk"><i class="fa fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Welcame Area -->
+
+        <!-- Start Our Service Area -->
+        <section class="junior__service bg-image--1 section-padding--bottom section--padding--xlg--top">
+            <div class="container">
+                <div class="row">
+                    <!-- Start Single Service -->
+                    {% if cor %}
+                    {% for i in cor %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="service bg--white border__color wow fadeInUp">
+                            <div class="service__icon">
+                                <img style="height:90px;width:90px;border-radius:200px;"  src="{{MEDIA_URL}}{{i.Course_Pic.url}}" alt="icon images">
+                            </div>
+                            <div class="service__details">
+                                <h6><a href="{% url 'singlecoursepage' pk=i.id %}">{{i.Course_Name}}</a></h6>
+                                <p>{{i.Description}}</p>
+                                <div class="service__btn">
+                                    <a class="dcare__btn--2" href="{% url 'singlecoursepage' pk=i.id %}">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+        <!-- End Our Service Area -->
+
+        <!-- Start Call To Action -->
+        
+        <!-- End Call To Action -->
+
+        <!-- Start our Class Area -->
+                    <!-- End Single Classes -->
+                    <!-- Start Single Classes -->
+                    <!-- End Single Classes -->
+                    <!-- Start Single Classes -->
+                    <!-- End Single Classes -->
+                    <!-- Start Single Classes -->
+                    <!-- End Single Classes -->
+                    <!-- Start Single Classes -->
+                    <!-- End Single Classes -->
+                </div>
+            </div>
+        </section>
+        <!-- End our Class Area -->
+        
+        <!-- Start Testimonial Area -->
+        <section class="junior__testimonial__area bg-image--2 section-padding--lg">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <div class="testimonial__container">
+                            <div class="tes__activation--1 owl-carousel owl-theme">
+                                <div class="testimonial__bg">
+                                    <!-- Start Single Testimonial -->
+                                    <div class="testimonial text-center">
+                                        <div class="testimonial__inner">
+                                            <div class="test__icon">
+                                                <img src="\static\images\banner\mid-img\pexels-olia-danilevich-5088022.jpg" alt="icon images">
+                                            </div>
+                                            <div class="client__details">
+                                                <p style="font-weight: bold;color: black;" >Lorem ipsum dolor t dolore magna aliqua. Ut enim ad minim veniam, quis nostexercitation ullamco laboris nisimollit anim id est lsunt explicabo. Nemo enim ipsam voluptatem quia voluptas quia voluptas sit aspernatd.</p>
+                                                <div class="client__info">
+                                                    <h6 style="font-weight: bold;color: black;">Lora alica</h6>
+                                                    <span style="font-weight: bold;color: black;">Gardients of student</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Testimonial -->
+                                </div>
+                                <div class="testimonial__bg">
+                                    <!-- Start Single Testimonial -->
+                                    <div class="testimonial text-center">
+                                        <div class="testimonial__inner">
+                                            <div class="test__icon">
+                                                <img src="\static\images\banner\mid-img\pexels-olia-danilevich-5088022.jpg" alt="icon images">
+                                            </div>
+                                            <div class="client__details">
+                                                <p style="font-weight: bold;color: black;">Kohinur ipsum dolor t dolore magna aliqua. Ut enim ad minim veniam, quis nostexercitation ullamco laboris nisimollit anim id est lsunt explicabo. Nemo enim ipsam voluptatem quia voluptas quia voluptas sit aspernatd.</p>
+                                                <div class="client__info">
+                                                    <h6 style="font-weight: bold;color: black;">Kohinur alica</h6>
+                                                    <span style="font-weight: bold;color: black;">Gardients of student</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Testimonial -->
+                                </div>
+                                <div class="testimonial__bg">
+                                    <!-- Start Single Testimonial -->
+                                    <div class="testimonial text-center">
+                                        <div class="testimonial__inner">
+                                            <div class="test__icon">
+                                                <img src="\static\images\banner\mid-img\pexels-olia-danilevich-5088022.jpg" alt="icon images">
+                                            </div>
+                                            <div class="client__details">
+                                                <p style="font-weight: bold;color: black;">Najnin ipsum dolor t dolore magna aliqua. Ut enim ad minim veniam, quis nostexercitation ullamco laboris nisimollit anim id est lsunt explicabo. Nemo enim ipsam voluptatem quia voluptas quia voluptas sit aspernatd.</p>
+                                                <div class="client__info">
+                                                    <h6 style="font-weight: bold;color: black;">Najnin alica</h6>
+                                                    <span style="font-weight: bold;color: black;">Gardients of student</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Single Testimonial -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonial Area -->
+        <!-- Start Our Gallery Area -->
+                    <!-- End Single Gallery -->
+                    <!-- Start Single Gallery -->
+                    <!-- End Single Gallery -->
+                    <!-- Start Single Gallery -->
+                    <!-- End Single Gallery -->
+                    <!-- Start Single Gallery -->
+                    <!-- End Single Gallery -->
+                    <!-- Start Single Gallery -->
+                    <!-- End Single Gallery -->
+                    <!-- Start Single Gallery -->
+                    <!-- End Single Gallery -->
+                </div>  
+            </div>
+        </section>
+        <!-- End Our Gallery Area -->
+        <!-- Start Blog Area -->
+<!-- End Blog Area -->
+        <!-- Start upcomming Area -->
+        <!-- End upcomming Area -->
+        <!-- Start Subscribe Area -->
+        <section class="bcare__subscribe subscribe--1">
+            <div class="container bg__cat--3">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-lg-12">
+                        <div class="subscribe__inner">
+                            <h2>Subscribe To Our Special Offers</h2>
+                            <div class="newsletter__form">
+                                <div class="input__box">
+                                    <div id="mc_embed_signup">
+                                        <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
+                                                <div class="news__input">
+                                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter Your E-mail" required>
+                                                </div>
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                                <div class="clearfix subscribe__btn"><input class="bst__btn btn--white__color" type="submit" value="Send Now" name="subscribe" id="mc-embedded-subscribe">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Subscribe Area -->
+{% endblock %}
+

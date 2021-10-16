@@ -1,0 +1,245 @@
+{% extends "app/student/base2.html" %}
+
+{% block content %}
+		<!-- Strat Slider Area -->
+		<div class="slide__carosel owl-carousel owl-theme">
+			<div class="slider__area slider--two bg-pngimage--4 d-flex slider__fixed--height justify-content-end align-items-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 offset-lg-6 offset-md-3 col-md-9 col-sm-12">
+							<div class="slider__activation">
+								<!-- Start Single Slide -->
+								<div class="slide">
+									<div class="slide__inner">
+										<h6>Create New Things</h6>
+										<h1>Play & learn, Create Beautiful Heaven World</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisic ming elit, sed do ei Excepteur.Tnam Bajki      vntoccaecat cupida proident, sunt in culpa qui dese runt mol .</p>
+										<div class="slider__btn">
+											<a class="dcare__btn black__btn max__height-btn" href="#">Read More</a>
+										</div>
+									</div>
+								</div>
+								<!-- End Single Slide -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider__area slider--two bg-pngimage--4 d-flex slider__fixed--height justify-content-end align-items-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 offset-lg-6 offset-md-3 col-md-9 col-sm-12">
+							<div class="slider__activation">
+								<!-- Start Single Slide -->
+								<div class="slide">
+									<div class="slide__inner">
+										<h6>Create New Things</h6>
+										<h1>Play & learn, Create Beautiful Heaven World</h1>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisic ming elit, sed do ei Excepteur.Tnam Bajki      vntoccaecat cupida proident, sunt in culpa qui dese runt mol .</p>
+										<div class="slider__btn">
+											<a class="dcare__btn black__btn max__height-btn" href="#">Read More</a>
+										</div>
+									</div>
+								</div>
+								<!-- End Single Slide -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Slider Area -->
+
+		<!-- Start Our Service Area -->
+		<section class="junior__service bg-image--1 service--2 section-padding--bottom section--padding--xlg--top">
+			<div class="container">
+				<div class="row">
+					<!-- Start Single Service -->
+					{% if c %}
+					{% for i in c %}
+					<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+						<div class="service border__color border__color--5 bg__cat--4">
+							<div class="service__icon">
+								<img style="height:85px;width:85px;border-radius:200px;" src="{{MEDIA_URL}}{{i.Course_Pic.url}}" alt="icon images">
+							</div>
+							<div class="service__details">
+								<h6><a href="#"></a>{{i.Course_Name}}</a></h6>
+								<p>{{i.Description}}</p>
+								
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					{% endif %}
+					<!-- End Single Service -->
+					<!-- Start Single Service -->
+					
+					
+					<!-- End Single Service -->
+				</div>
+			</div>
+		</section>
+		<!-- End Our Service Area -->
+
+		<!-- Start Welcame Area -->
+		<section class="junior__welcome__area welcome--2 bg-image--9 section-padding--lg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-sm-12 col-md-12">
+						<div class="section__title text-center">
+							<h2 class="title__line">Welcome To Junior Home</h2>
+							<p>“I welcome you all students to the new class and hope you all will excel in all the subjects and the new curriculum. Do come to me if you have any queries and problems relating to curriculum.”</p>
+						</div>
+					</div>
+				</div>
+				<div class="row jn__welcome__wrapper align-items-center">
+					<div class="col-md-12 col-lg-6 col-sm-12">
+						<div class="jnr__Welcome__thumb">
+							<img src="images/wel-come/2.jpg" alt="images">
+							<a class="play__btn" href="https://www.youtube.com/watch?v=MCJEkZtqlBk"><i class="fa fa-play"></i></a>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-6 col-sm-12 md-mt-40 sm-mt-40">
+						<div class="welcome__juniro__inner">
+							<h3>Welcome to <span class="theme-color">O</span><span>u</span>r School</h3>
+							<p class="wow flipInX">Online students attend their classes and studies online through video conferences and chats. The online students are communicated through emails and chat rooms and the welcome wishes for these students are sent through mails</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Welcame Area -->
+
+		<!-- Start Our Gallery Area -->
+		<section class="junior__gallery__area gallery--2 bg--white section-padding--lg">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-sm-12 col-md-12">
+						<div class="section__title text-center">
+							<h2 class="title__line">Our Gallery</h2>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row galler__wrap mt--40">
+					<!-- Start Single Gallery -->
+					<!-- End Single Gallery -->
+					
+					<!-- End Single Gallery -->
+					<!-- Start Single Gallery -->
+					{% if c %}
+					{% for i in c %}
+					<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+						<div class="gallery">
+							<div class="gallery__thumb">
+								<a href="#">
+									<img style="height:100px;width:100px;border-radius:5px;" src="{{MEDIA_URL}}{{i.Course_Pic.url}}" alt="gallery images">
+								</a>
+							</div>
+							<div class="gallery__hover__inner">
+								<div class="gallery__hover__action">
+									<ul class="gallery__zoom">
+										<li><a href="images/gallery/big-img/4.jpg" data-lightbox="grportimg" data-title="My caption"><i class="fa fa-search"></i></a></li>
+										<li><a href="gallery-details.html"><i class="fa fa-link"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+					{% endfor %}
+					{% endif %}	
+					<!-- End Single Gallery -->
+				</div>	
+			</div>
+		</section>
+		<!-- End Our Gallery Area -->
+
+		<!-- Start Team Area -->
+		
+					<!-- Start Single Team -->
+					<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+						<div class="team__style--3 team--4 hover-color-2">
+							<div class="team__hover__action">
+								<div class="team__details">
+									<div class="team__info">
+										<h6><a href="#">Hanchica Merica</a></h6>
+										<span>Drawing Instructor</span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consecteturadmodi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+									<ul class="dacre__social__link--2 d-flex justify-content-center">
+										<li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+										<li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+										<li class="vimeo"><a href="https://vimeo.com/"><i class="fa fa-vimeo"></i></a></li>
+										<li class="pinterest"><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End Single Team -->
+				</div>
+			</div>
+		</section>
+		<!-- End Team Area -->
+		<!-- Start Counter Up Area -->
+		<section class="dcare__counterup__area section-padding--lg bg-image--6">	
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-12 col-sm-12">
+						<div class="counterup__wrapper d-flex flex-wrap flex-lg-nowrap flex-md-nowrap justify-content-between">
+							<!-- Start Single Fact -->
+                            <div class="funfact">
+                                
+                                <div class="fact__count ">
+                                    <span class="count">95</span>
+                                </div>
+                                <div class="fact__title">
+                                    <h2>Student</h2>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+							<!-- Start Single Fact -->
+                            <div class="funfact">
+                                
+                                <div class="fact__count ">
+                                    <span class="count color--2">95</span>
+                                </div>
+                                <div class="fact__title">
+                                    <h2>classroom</h2>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+							<!-- Start Single Fact -->
+                            <div class="funfact">
+                                
+                                <div class="fact__count ">
+                                    <span class="count color--3">40</span>
+                                </div>
+                                <div class="fact__title">
+                                    <h2>Teacher</h2>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+							<!-- Start Single Fact -->
+                            <div class="funfact">
+                                
+                                <div class="fact__count">
+                                    <span class="count color--4">10</span>
+                                </div>
+                                <div class="fact__title">
+                                    <h2>School Bus</h2>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Counter Up Area -->
+		<!-- Start Subscribe Area -->
+		
+		<!-- End Subscribe Area -->
+{% endblock %}
+	

@@ -1,0 +1,10 @@
+asgiref==3.3.4
+Django==2.0
+gunicorn==20.1.0
+mysqlclient==2.0.3
+Pillow==8.2.0
+pycryptodome==3.10.1
+pycryptodomex==3.10.1
+pytz==2021.1
+sqlparse==0.4.1
+whitenoise==5.3.0

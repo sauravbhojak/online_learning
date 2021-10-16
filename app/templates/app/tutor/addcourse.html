@@ -1,0 +1,141 @@
+{% extends "app/tutor/base1.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous" />
+  
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+   
+  </nav>
+
+
+  <br>
+  <br>
+
+  <!-- LOGIN -->
+  <section id="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header">
+              <h4>Add Course</h4>
+            </div>
+            <div class="card-body">
+              {% if msg %}
+                <h4 style="color:red">{{msg}}</h4> {% endif %}
+
+              {% if not subcat %}
+
+              
+              <form action="{% url 'sendcat' %}" method="POST" >
+                {% csrf_token %}
+                {% if category %}
+                
+                <lable for="category">Category</lable>
+                <select name="cid" id ="category">
+                  <option>====== Category =======</option>
+                  {% for i in category %}
+                  <option value="{{i.id}}">{{i.Cat_Name}}</option>
+                  {% endfor %}
+                
+                  
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Next" class="btn btn-primary btn-block">
+                
+                
+              </form>  
+              {% endif %}
+              {% else %}
+<!-- ====================================== -->
+
+                <form action="{% url 'insertcourse' %}" method="POST" enctype="multipart/form-data">  
+                  {% csrf_token %}
+
+                <lable for="subcategory">Subcategory</lable>
+                <select name="sid" id ="subcategory">
+                <option>====== Subcategory =======</option>
+                {% for i in subcat %}
+
+                <option value="{{i.id}}">{{i.Sub_cat_name}}</option> 
+                {% endfor %}
+                </select>
+                <br>
+                <br>
+
+                
+                <div class="form-group">
+                  <label for="email">Course Name</label>
+                  <input type="text" name="coursename" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                  <label for="email">Code</label>
+                  <input type="text" name="code" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                  <label for="email">Description</label>
+                  <input type="text" name="description" class="form-control" required="">
+                  </div>
+                <div class="form-group">
+                  <label for="email">Duration</label>
+                  <input type="text" name="duration" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                  <label for="email">Price</label>
+                  <input type="text" name="price" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                  <label for="email">Pre_Requirment</label>
+                  <input type="text" name="pre_requirement" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                  <label for="email">Course_pic</label>
+                  <input type="file" name="course_pic" class="form-control" required="">
+                </div>
+                <input type="submit" value="Add Course" class="btn btn-primary btn-block">
+              </form> 
+                {% endif %}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+  </script>
+</body>
+
+</html>
+
+{% endblock %}
